@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # BAREOS - Backup Archiving REcovery Open Sourced
 #
-# Copyright (C) 2014-2020 Bareos GmbH & Co. KG
+# Copyright (C) 2020-2020 Bareos GmbH & Co. KG
 #
 # This program is Free Software; you can redistribute it and/or
 # modify it under the terms of version three of the GNU Affero General Public
@@ -233,7 +233,7 @@ def configure_add_standard_component(
             "message": "Could not add %s with command '%s'. Message: '%s'"
             % (componentType, addCommand, e)
         }
-    
+
     if "configure" in result and "add" in result["configure"]:
         return result
     else:
@@ -502,7 +502,7 @@ def read_all_clients(
 ):
     """
     Read all jobdef resources. Built on console command _show clients_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="clients", verbose=verbose)
@@ -541,7 +541,7 @@ def read_all_filesets(
 ):
     """
     Read all jobdef resources. Built on console command _show filesets_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="filesets", verbose=verbose)
@@ -572,7 +572,7 @@ def runJob(
     Run a job, defined by jobControl record.
 
     **Note**: Swagger throws a weird error when running this command by the UI,
-    while the given curl statement works fine. 
+    while the given curl statement works fine.
     """
     result = None
     jobCommand = "run"
@@ -969,7 +969,7 @@ def read_all_jobdefs(
 ):
     """
     Read all jobdef resources. Built on console command _show jobdefs_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="jobdefs", verbose=verbose)
@@ -993,7 +993,7 @@ def read_all_jobs(
 ):
     """
     Read all jobdef resources. Built on console command _show jobs_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="jobs", verbose=verbose)
@@ -1021,7 +1021,7 @@ def post_job(
     """
     Create a new job resource.
     Console command used: _configure add job_
-    
+
     TODO: string lists are processed and acknowledged in director's response
     but do not make it into the configuration.
 
@@ -1029,7 +1029,7 @@ def post_job(
 
         {
             "configure": {
-            "add": 
+            "add":
                 {
                     "resource": "Job",
                     "name": "DefaultJobYYYYxxx",
@@ -1380,7 +1380,7 @@ def read_all_pools(
 ):
     """
     Read all jobdef resources. Built on console command _show pools_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="pools", verbose=verbose)
@@ -1488,7 +1488,7 @@ def read_all_schedules(
 ):
     """
     Read all jobdef resources. Built on console command _show schedules_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="schedules", verbose=verbose)
@@ -1582,7 +1582,7 @@ def read_all_storages(
 ):
     """
     Read all jobdef resources. Built on console command _show storages_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="storages", verbose=verbose)
@@ -1627,7 +1627,7 @@ def read_all_users(
 ):
     """
     Read all users resources. Built on console command _show users_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="users", verbose=verbose)
@@ -1671,7 +1671,7 @@ def read_all_profiles(
 ):
     """
     Read all jobdef resources. Built on console command _show profiles_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="profiles", verbose=verbose)
@@ -1715,7 +1715,7 @@ def read_all_consoles(
 ):
     """
     Read all jobdef resources. Built on console command _show consoles_.
-    
+
     Needs at least Bareos Version >= 20.0.0
     """
     return show_configuration_items(response=response, current_user=current_user, itemType="consoles", verbose=verbose)

@@ -5,7 +5,7 @@ Experimental and subject to enhancements and changes.
 This is an experimental backend for development purposes.
 
 It provides a REST API using fastapi and python-bareos to connect to
-a Bareos director. 
+a Bareos director.
 
 Connexion handles the HTTP requests defined by using OpenAPI
 specification.
@@ -18,7 +18,7 @@ specification.
 
 ### Installation
 
-Change into the directory with _requirements.txt_, _main.py_ and _api.ini_
+Change into the directory with _requirements.txt_, _bareos-restapi.py_ and _api.ini_
 * We recommend to create a dedicated Python environment for the installation:
 
 ```
@@ -45,7 +45,7 @@ TODO: add possibility to connect to a choice of directors
 ### Start the backend server
 
 ```
-uvicorn main:app --reload
+uvicorn bareos-restapi:app --reload
 ```
 
 * Serve the Swagger UI to explore the REST API: http://127.0.0.1:8000/docs

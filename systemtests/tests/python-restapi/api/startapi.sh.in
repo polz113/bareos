@@ -12,7 +12,7 @@ if [ "${PROJECT_SOURCE_DIR}" ] && [ -e "${PROJECT_SOURCE_DIR}/../python-bareos/"
     PYTHON_EXECUTABLE=${PYTHON_EXECUTABLE:-python}
 fi
 
-uvicorn main:app --port @restapi_port@ > ../log/bareos-restapi.log 2>&1 &
+uvicorn bareos-restapi:app --port @restapi_port@ > ../log/bareos-restapi.log 2>&1 &
 PID=$!
 echo @restapi_port@ > api.port
 echo $PID > api.pid

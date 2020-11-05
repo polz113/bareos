@@ -475,7 +475,7 @@ documentation <https://www.uvicorn.org/>`_. The default port is 8000 and the def
 Start the backend server
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-:command:`uvicorn main:app --reload`
+:command:`uvicorn bareos-restapi:app --reload`
 
 Serve the Swagger UI to explore the REST API: `<http://127.0.0.1:8000/docs>`_
 Alternatively you can use the redoc format: `<http://127.0.0.1:8000/redoc>`_
